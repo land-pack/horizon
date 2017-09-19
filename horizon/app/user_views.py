@@ -10,3 +10,8 @@ def user_from():
 @app.route("/user/alive", methods=['GET', 'POST'])
 def user_alive():
     return render_template("user/alive.html")
+
+
+@app.route("/user/info", methods=['GET', 'POST'])
+def user_info():
+    return render_template("user/info.html")

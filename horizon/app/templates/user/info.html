@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block filter %}
+{% endblock %}
+
+{% block content %}
+<div id="main" style="width: 900px;height:600px;"></div>
+
+<script type="text/javascript">
+	
+var myChart = echarts.init(document.getElementById('main'));
+
+
+option = {
+    title: {
+        text: '用户信息雷达图'
+    },
+    tooltip: {},
+    legend: {
+        data: ['昨日数据 ', '今日数据 ']
+    },
+    radar: {
+        // shape: 'circle',
+        name: {
+            textStyle: {
+                color: '#fff',
+                backgroundColor: '#999',
+                borderRadius: 3,
+                padding: [3, 5]
+           }
+        },
+        indicator: [
+           { name: '投注', max: 6500},
+           { name: '中奖', max: 16000},
+           { name: '兑换券', max: 30},
+           { name: '充值', max: 38000},
+           { name: '登陆次数', max: 52000},
+           { name: '停留时间', max: 25000}
+        ]
+    },
+    series: [{
+        name: '昨日数据 vs 今日数据 ',
+        type: 'radar',
+        // areaStyle: {normal: {}},
+        data : [
+            {
+                value : [4300, 10000, 20, 35000, 50000, 19000],
+                name : '昨日数据 '
+            },
+             {
+                value : [5000, 14000, 28, 31000, 42000, 21000],
+                name : '今日数据 '
+            }
+        ]
+    }]
+};
+
+
+    // 使用刚指定的配置项和数据显示图表。
+   	myChart.setOption(option);
+</script>
+
+{% endblock %}
