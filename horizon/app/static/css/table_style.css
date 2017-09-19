@@ -1,0 +1,28 @@
+.mytable {
+	border: 5px;
+	width:900px;
+	font-size:14px;
+	margin: 1cm 1cm 1pt;
+}
+.mytable td, .mytable th {
+	border:1px solid #000000;
+	padding: 0 5px;
+}
+
+.mytable tr {
+	border:1px solid #000000;
+}
+
+table.mytable tr:nth-child(even){
+background: #FFFFFF;
+height: 40px;
+padding: 2px;
+border: 5px;
+}
+
+table.mytable tr:nth-child(odd){
+background: #ADD8E6;
+height: 40px;
+padding: 2px;
+border: 5px;
+}

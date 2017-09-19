@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block filter %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+    <!-- Table -->
+    <table class="mytable" id="MytableID" data-tableexport-display="always">
+         <tr>
+             <th colspan="3">收入类型</th>
+             <th colspan="3">支出类型</th>
+             <th colspan="2">用户余额数量</th>
+         </tr>
+         {% for i in part1 %}
+         <tr>
+             <th>{{ i.get("index") }}</th>
+             <th>{{ i.get("name") }}</th>
+             <td>{{ i.get("value") }}</td>
+             <th>{{ i.get("index2") }}</th>
+             <th>{{ i.get("name2") }}</th>
+             <td>{{ i.get("value2") }}</td>
+             <th>{{ i.get("date") }}</th>
+             <td>{{ i.get("account") }}</td>
+         </tr>
+         {% endfor %}
+        <!-- For the 2 part  -->
+        {% for i, j in in_2_data.items() %}
+        <tr>
+             <th>{{ j.get("index") }}</th>
+             <th>{{ j.get("name") }}</th>
+             <td>{{ j.get("value") }}</td>
+             <th>{{ j.get("index2") }}</th>
+             <th>{{ j.get("name2") }}</th>
+             <td>{{ j.get("value2") }}</td>
+             <td colspan="2"></td>
+        </tr>
+        {% endfor %}
+
+
+        <!-- Middle line show below -->
+        <tr>
+             <th>{{ middle_line.get("index") }}</th>
+             <th>{{ middle_line.get("name") }}</th>
+             <td>{{ middle_line.get("value") }}</td>
+             <th></th>
+             <th>{{ middle_line.get("name2") }}</th>
+             <td>{{ middle_line.get("value2") }}</td>
+             <td colspan="2"></td>
+        </tr>
+
+        <!-- For the 3 part  -->
+        {% for i, j in in_3_data.items() %}
+        <tr>
+             <th>{{ j.get("index") }}</th>
+             <th>{{ j.get("name") }}</th>
+             <td>{{ j.get("value") }}</td>
+             <td colspan="3"></td>
+             <td colspan="2"></td>
+        </tr>
+        {% endfor %}
+
+         <tr>
+             <th></th>
+             <th>合计</th>
+             <td>{{ in_data_total }}</td>
+             <td colspan="3"></td>
+             <td colspan="2"></td>
+        </tr>
+        <tr>
+             <th colspan="3">收支净值差</th>
+             <td colspan="3">{{ in_out_data }}</td>
+             <th>余额净增值</th>
+             <td>{{ account_sub }}</td>
+        </tr>
+        <tr>
+             <th colspan="6">收支净值差 - 余额净增值</th>
+             <td colspan="2">{{ balance }}</td>
+        </tr>
+    </table>
+
+
+{% endblock %}
+
