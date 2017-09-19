@@ -66,9 +66,35 @@
         <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
         <div id="navbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ url_for('.user_from') }}">用户来源</a></li>
-            <li><a href="{{ url_for('.user_alive') }}">用户转化率</a></li>
-            <li><a href="#contact">实时充值</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户数据<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{url_for('.user_from')}}">用户来源</a></li>
+                <li><a href="{{url_for('.recharge_step')}}">用户流失</a></li>
+                <li><a href="{{url_for('.index')}}"></a></li>
+
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">红包</li>
+                <li><a href="#">微信红包</a></li>
+                <li><a href="#">金币红包</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">充值数据<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{url_for('.index')}}">充值转化率</a></li>
+                <li><a href="{{url_for('.recharge_step')}}">充值漏斗</a></li>
+                <li><a href="{{url_for('.index')}}"></a></li>
+
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">红包</li>
+                <li><a href="#">微信红包</a></li>
+                <li><a href="#">金币红包</a></li>
+              </ul>
+            </li>
+
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">收支余额统计<span class="caret"></span></a>
               <ul class="dropdown-menu">

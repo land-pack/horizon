@@ -15,7 +15,7 @@ needs to import the app variable defined in this script. Putting the
 import at the end avoids the circular import error.
 """
 # fcc_ as finance project
-from app import main_views, user_views
+from app import main_views, user_views, recharge_views
 
 # pcc_ as product project
 
