@@ -1,9 +1,7 @@
-{% extends "base.html" %}
+{% extends "_base.html" %}
 
-{% block filter %}
-{% endblock %}
 
-{% block content %}
+{% block wheel %}
 <div id="main" style="width: 900px;height:600px;"></div>
 
 <script type="text/javascript">
@@ -14,7 +12,10 @@ var myChart = echarts.init(document.getElementById('main'));
 option = {
     title: {
         text: '用户转化率',
-        subtext: '用户生命周期'
+        subtext: '用户生命周期',
+        textStyle: {
+                color: '#fff'
+            }
     },
     tooltip: {
         trigger: 'item',
@@ -28,7 +29,11 @@ option = {
         }
     },
     legend: {
-        data: ['下载','打开','领奖','投注','充值']
+        data: ['下载','打开','领奖','投注','充值'],
+        textStyle: {
+                color: '#fff',
+                fontSize: 14
+            }
     },
     series: [
         {

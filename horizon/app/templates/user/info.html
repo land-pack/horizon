@@ -1,9 +1,7 @@
-{% extends "base.html" %}
+{% extends "_base.html" %}
 
-{% block filter %}
-{% endblock %}
 
-{% block content %}
+{% block wheel %}
 <div id="main" style="width: 900px;height:600px;"></div>
 
 <script type="text/javascript">
@@ -17,7 +15,11 @@ option = {
     },
     tooltip: {},
     legend: {
-        data: ['昨日数据 ', '今日数据 ']
+        data: ['昨日数据 ', '今日数据 '],
+        textStyle: {
+                color: '#fff',
+                fontSize: 14
+            }
     },
     radar: {
         // shape: 'circle',

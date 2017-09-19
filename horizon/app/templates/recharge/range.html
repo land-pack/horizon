@@ -1,9 +1,7 @@
-{% extends "base.html" %}
+{% extends "_base.html" %}
 
-{% block filter %}
-{% endblock %}
 
-{% block content %}
+{% block wheel %}
 <div id="main" style="width: 900px;height:600px;"></div>
 
 <script type="text/javascript">
@@ -17,7 +15,11 @@ option = {
         }
     },
     legend: {
-        data: ['0~30', '30~100','100~300','300~500','500~']
+        data: ['0~30', '30~100','100~300','300~500','500~'],
+        textStyle:{
+          color:'#FFF',
+          fontSize:13
+        }
     },
     grid: {
         left: '3%',
@@ -25,13 +27,25 @@ option = {
         bottom: '3%',
         containLabel: true
     },
-    xAxis:  {
-        type: 'value'
+    xAxis: {
+        axisLine: {
+            type: 'value',
+            lineStyle: {
+            color: '#FFF',
+        }
+       }
     },
     yAxis: {
         type: 'category',
-        data: ['周一','周二','周三','周四','周五','周六','周日']
+        data: ['周一','周二','周三','周四','周五','周六','周日'],
+        axisLine: {
+            lineStyle: {
+            color: '#FFF',
+            type: 'solid'
+        }
+       }
     },
+
     series: [
         {
             name: '0~30',
