@@ -15,3 +15,14 @@ def user_alive():
 @app.route("/user/info", methods=['GET', 'POST'])
 def user_info():
     return render_template("user/info.html")
+
+
+@app.route("/user/week", methods=['GET', 'POST'])
+def user_week():
+    return render_template("user/week.html")
+
+
+@app.route("/user/lost", methods=['GET', 'POST'])
+def user_lost():
+	# no login aleast 30 days
+    return render_template("user/lost.html")

@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block filter %}
+{% endblock %}
+
+{% block content %}
+<div id="main" style="width: 900px;height:600px;"></div>
+
+<script type="text/javascript">
+	
+var myChart = echarts.init(document.getElementById('main'));
+
+
+option = {
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['盈利', '投注', '中奖']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            axisTick : {show: false},
+            data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+    ],
+    series : [
+        {
+            name:'盈利',
+            type:'bar',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'inside'
+                }
+            },
+            data:[200, 170, 240, 244, 200, 220, 210]
+        },
+        {
+            name:'中奖',
+            type:'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true
+                }
+            },
+            data:[320, 302, 341, 374, 390, 450, 420]
+        },
+        {
+            name:'投注',
+            type:'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'left'
+                }
+            },
+            data:[-120, -132, -101, -134, -190, -230, -210]
+        }
+    ]
+};
+
+
+
+    // 使用刚指定的配置项和数据显示图表。
+   	myChart.setOption(option);
+</script>
+
+{% endblock %}
+

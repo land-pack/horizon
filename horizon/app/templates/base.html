@@ -71,12 +71,12 @@
               <ul class="dropdown-menu">
                 <li><a href="{{url_for('.user_from')}}">用户来源</a></li>
                 <li><a href="{{url_for('.user_info')}}">用户指标</a></li>
-                <li><a href="{{url_for('.index')}}"></a></li>
+                <li><a href="{{url_for('.user_week')}}">每周数据</a></li>
 
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">红包</li>
-                <li><a href="#">微信红包</a></li>
-                <li><a href="#">金币红包</a></li>
+                <li class="dropdown-header">流失用户</li>
+                <li><a href="{{url_for('.user_lost')}}">30天前登录的用户</a></li>
+                <li><a href="#">15天前登录的用户</a></li>
               </ul>
             </li>
 
@@ -88,9 +88,9 @@
                 <li><a href="{{url_for('.index')}}"></a></li>
 
                 <li role="separator" class="divider"></li>
-                <li class="dropdown-header">红包</li>
-                <li><a href="#">微信红包</a></li>
-                <li><a href="#">金币红包</a></li>
+                <li class="dropdown-header">充值分类</li>
+                <li><a href="{{ url_for('.recharge_range') }}">额度阶梯</a></li>
+                <li><a href="#">用户来源</a></li>
               </ul>
             </li>
 
