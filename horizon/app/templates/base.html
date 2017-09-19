@@ -66,8 +66,8 @@
         <!-- Note that the .navbar-collapse and .collapse classes have been removed from the #navbar -->
         <div id="navbar">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">实时兑换</a></li>
-            <li><a href="#about">实时消费</a></li>
+            <li class="active"><a href="{{ url_for('.user_from') }}">用户来源</a></li>
+            <li><a href="{{ url_for('.user_alive') }}">用户转化率</a></li>
             <li><a href="#contact">实时充值</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">收支余额统计<span class="caret"></span></a>
