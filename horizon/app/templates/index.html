@@ -1,4 +1,126 @@
 {% extends "_base.html" %}
 
 
+{% block wheel %}
+<div class="di awt agl">
+  <div class="en agg amz">
+    <div class="azy aim">
+      <canvas
+        class="bra"
+        width="200" height="200"
+        data-chart="doughnut"
+        data-dataset="[230, 130]"
+        data-dataset-options="{ borderColor: '#252830', backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+        data-labels="['Returning', 'New']">
+      </canvas>
+    </div>
+    <strong class="axn">Traffic</strong>
+    <h4>New vs Returning</h4>
+  </div>
+  <div class="en agg amz">
+    <div class="azy aim">
+      <canvas
+        class="bra"
+        width="200" height="200"
+        data-chart="doughnut"
+        data-dataset="[330,30]"
+        data-dataset-options="{ borderColor: '#252830', backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+        data-labels="['Returning', 'New']">
+      </canvas>
+    </div>
+    <strong class="axn">Revenue</strong>
+    <h4>New vs Recurring</h4>
+  </div>
+  <div class="en agg amz">
+    <div class="azy aim">
+      <canvas
+        class="bra"
+        width="200" height="200"
+        data-chart="doughnut"
+        data-dataset="[100,260]"
+        data-dataset-options="{ borderColor: '#252830', backgroundColor: ['#1ca8dd', '#1bc98e'] }"
+        data-labels="['Referrals', 'Direct']">
+      </canvas>
+    </div>
+    <strong class="axn">Traffic</strong>
+    <h4>Direct vs Referrals</h4>
+  </div>
+</div>
+{% endblock %}
+
+
+
+{% block square %}
+
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqv">
+      <div class="ahm">
+        <span class="bqq">Page views</span>
+        <h2 class="bqp">
+          1,293
+          <small class="bqr bqs">5%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[28,68,41,43,96,45,100]]"
+        data-labels="['a','b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;">
+      </canvas>
+    </div>
+  </div>
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqy">
+      <div class="ahm">
+        <span class="bqq">Downloads</span>
+        <h2 class="bqp">
+          758
+          <small class="bqr bqt">1.3%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[4,34,64,27,96,50,80]]"
+        data-labels="['a', 'b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqw">
+      <div class="ahm">
+        <span class="bqq">Sign-ups</span>
+        <h2 class="bqp">
+          1,293
+          <small class="bqr bqs">6.75%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[12,38,32,60,36,54,68]]"
+        data-labels="['a', 'b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqx">
+      <div class="ahm">
+        <span class="bqq">Downloads</span>
+        <h2 class="bqp">
+          999
+          <small class="bqr bqt">5.3%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[43,48,52,58,50,95,200]]"
+        data-labels="['a', 'b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+{% endblock %}
+
 

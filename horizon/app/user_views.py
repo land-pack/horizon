@@ -26,3 +26,10 @@ def user_week():
 def user_lost():
 	# no login aleast 30 days
     return render_template("user/lost.html")
+
+
+# ===dark
+@app.route("/dark/sumary", methods=['GET', 'POST'])
+def user_sumary():
+	# no login aleast 30 days
+    return render_template("dark/sumary.html")

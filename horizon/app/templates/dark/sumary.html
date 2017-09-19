@@ -1,0 +1,195 @@
+{% extends "_base.html" %}
+
+
+{% block wheel %}
+<div class="di awt agl">
+  <div id="main" style="width: 900px;height:600px;"></div>
+
+<script type="text/javascript">
+  
+var myChart = echarts.init(document.getElementById('main'));
+
+option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'right',
+        data:['安卓','IOS','H5','主包','马甲包','积分墙','500app','500比分','迅雷联运','其他'],
+        textStyle:{
+          color:'#FFF',
+          fontSize:13
+        }
+    },
+    series: [
+        {
+            name:'来源',
+            type:'pie',
+            selectedMode: 'single',
+            radius: [0, '30%'],
+
+            label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:335, name:'安卓', selected:true},
+                {value:679, name:'H5'},
+                {value:1548, name:'IOS'}
+            ]
+        },
+        {
+            name:'来源',
+            type:'pie',
+            radius: ['40%', '55%'],
+            label: {
+                normal: {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    // shadowBlur:3,
+                    // shadowOffsetX: 2,
+                    // shadowOffsetY: 2,
+                    // shadowColor: '#999',
+                    // padding: [0, 7],
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        abg: {
+                            backgroundColor: '#333',
+                            width: '100%',
+                            align: 'right',
+                            height: 22,
+                            borderRadius: [4, 4, 0, 0]
+                        },
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:335, name:'安卓'},
+                {value:310, name:'500比分'},
+                {value:234, name:'500app'},
+                {value:135, name:'迅雷联运'},
+                {value:1048, name:'IOS主包'},
+                {value:251, name:'IOS积分墙'},
+                {value:147, name:'IOS马甲包'},
+                {value:102, name:'其他'}
+            ]
+        }
+    ]
+};
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+
+</div>
+
+{% endblock %}
+
+
+
+{% block square %}
+
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqv">
+      <div class="ahm">
+        <span class="bqq">Page views</span>
+        <h2 class="bqp">
+          1,293
+          <small class="bqr bqs">5%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[28,68,41,43,96,45,100]]"
+        data-labels="['a','b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;">
+      </canvas>
+    </div>
+  </div>
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqy">
+      <div class="ahm">
+        <span class="bqq">Downloads</span>
+        <h2 class="bqp">
+          758
+          <small class="bqr bqt">1.3%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[4,34,64,27,96,50,80]]"
+        data-labels="['a', 'b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqw">
+      <div class="ahm">
+        <span class="bqq">Sign-ups</span>
+        <h2 class="bqp">
+          1,293
+          <small class="bqr bqs">6.75%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[12,38,32,60,36,54,68]]"
+        data-labels="['a', 'b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+  <div class="ep fm afz ang ate">
+    <div class="bsm bqx">
+      <div class="ahm">
+        <span class="bqq">Downloads</span>
+        <h2 class="bqp">
+          999
+          <small class="bqr bqt">5.3%</small>
+        </h2>
+        <hr class="bqz afe">
+      </div>
+      <canvas id="sparkline1" width="378" height="94" class="bsn"
+        data-chart="spark-line"
+        data-dataset="[[43,48,52,58,50,95,200]]"
+        data-labels="['a', 'b','c','d','e','f','g']"
+        style="width: 189px; height: 47px;"></canvas>
+    </div>
+  </div>
+{% endblock %}
+
+
